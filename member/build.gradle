@@ -39,9 +39,11 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.amqp:spring-rabbit-test'
 
+    implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.10.0-RC1'
     implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '4.9.1'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.3'
+    //implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
     implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.12.3'
     implementation fileTree(dir: 'lib', include: ['*.jar'])
 }
