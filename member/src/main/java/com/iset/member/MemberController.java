@@ -19,14 +19,14 @@ public class MemberController {
 
 	@Autowired // This means to get the bean called userRepository
 	private MemberRepository memberRepository;
-	
-	@GetMapping("/hello")
+
+	@RequestMapping("/hello")
 	public String list(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		return "greeting";
 	}
-	
-	@GetMapping("/list/{username}")
-	public Object searchCustomer(@PathVariable("username") String username) throws Exception {
+
+	@RequestMapping({"/list/{username}", "/list/"})
+	public Object searchCustomer(@PathVariable(name="username", required=false) String username) throws Exception {
 
 		Customer customer = new Customer();
 		customer.setLastName(username);

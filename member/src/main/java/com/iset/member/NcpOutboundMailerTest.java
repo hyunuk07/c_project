@@ -38,7 +38,6 @@ public class NcpOutboundMailerTest {
 		
 		if(apiClient == null)	apiClient = new ApiClient.ApiClientBuilder()
 					.addMarshaller(JsonMarshaller.getInstance())
-					.addMarshaller(XmlMarshaller.getInstance())
 					.addMarshaller(FormMarshaller.getInstance())
 					.setCredentials(new PropertiesFileCredentialsProvider("naverMailCredentials.properties").getCredentials())
 					.setLogging(true)
