@@ -75,7 +75,7 @@ export default class Edit extends React.Component<IProps, IState> {
     private onSave = () => {
 
         console.log(this.state.persons);
-        BaseService.update<Persons>("/member/update/", this.props.match.params.id,this.state.persons).then(
+        BaseService.update<Persons>("/member/save", this.state.persons).then(
             (rp) => {
                 if (rp.Status) {
                     toastr.success('Member saved.');

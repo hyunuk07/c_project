@@ -26,19 +26,17 @@ public class MemberController {
 		return "greeting";
 	}
 
-	@RequestMapping({"/edit/{customerId}", "/list/"})
+	@RequestMapping({"/edit/{customerId}", "/list"})
 	public Object searchCustomer(@PathVariable(name="customerId", required=false) Long customerId) throws Exception {
 		Map map = new HashMap();
 
-		if(customerId != null) {
-			map.put("edit", memberRepository.findById(customerId));
-		}else map.put("list", memberRepository.findAll());
+		if(customerId != null) map.put("edit", memberRepository.findById(customerId));
+		else map.put("list", memberRepository.findAll());
 
 		return map;
 	}
 
-
-	@RequestMapping({"/saveCustomer"})
+	@RequestMapping({"/save"})
 	public String saveCustomer(Customer customer) throws Exception {
 		memberRepository.save(customer);
 		return "/list/";

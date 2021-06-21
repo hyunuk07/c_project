@@ -48,9 +48,9 @@ export default class BaseService {
             });
         return res;
     }
-    public static update<T>(url: string, param: any, obj: T): Promise<Response> {
+    public static update<T>(url: string, obj: T): Promise<Response> {
 
-        let res = axios.post(this.baseURL + url + param, obj)
+        let res = axios.post(this.baseURL + url, obj)
             .then(response => {
                 return new Response(true, null, "성공", "");
             })

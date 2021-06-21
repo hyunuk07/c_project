@@ -16,21 +16,21 @@ export const PersonsForm: React.FunctionComponent<Props> = (props) => {
 
             <Input
                 name="firstName"
-                label="firstName"
+                label="이름"
                 value={props.persons.firstName}
                 onChange={props.onChange}
             />
 
             <Input
                 name="lastName"
-                label="lastName"
+                label="성"
                 value={props.persons.lastName}
                 onChange={props.onChange}
             />
 
             <Input
                 name="email"
-                label="email"
+                label="이메일"
                 value={props.persons.email.toString()}
                 onChange={props.onChange}
             />
