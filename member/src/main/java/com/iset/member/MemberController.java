@@ -38,4 +38,11 @@ public class MemberController {
 		map.put("userName",customer.getUserName());
 		return map;
 	}
+
+
+	@RequestMapping({"/saveCustomer"})
+	public String saveCustomer(Customer customer) throws Exception {
+		memberRepository.save(customer);
+		return "/list/";
+	}
 }

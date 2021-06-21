@@ -60,7 +60,7 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 	/**
 	 * Returns all users with the given name as first- or lastname. This makes the query to method relation much more
 	 * refactoring-safe as the order of the method parameters is completely irrelevant.
-	 * 
+	 *
 	 * @param name
 	 * @return
 	 */
@@ -147,4 +147,5 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 
 	@Async
 	CompletableFuture<List<Customer>> readAllBy();
+
 }
