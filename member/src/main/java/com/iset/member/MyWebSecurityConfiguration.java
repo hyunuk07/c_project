@@ -7,8 +7,15 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
+
+import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
@@ -28,6 +35,8 @@ public class MyWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .formLogin() // enable form based log in
                 // set permitAll for all URLs associated with Form Login
                 .permitAll();
+        //http.antMatcher("/**").authorizeRequests().antMatchers("/**").permitAll().anyRequest().authenticated();
+        http.cors().and().csrf().disable();
     }
 
     @Override
@@ -37,4 +46,5 @@ public class MyWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         .inMemoryAuthentication().withUser("user").password("password").roles("USER")
         .and().withUser("admin").password("password").roles("USER", "ADMIN");
     }
+
 }

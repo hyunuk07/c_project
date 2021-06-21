@@ -30,13 +30,18 @@ public class Customer {
 
 	private static final long serialVersionUID = -2952735933715107252L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long customerId;
 	private String firstName;
 	private String lastName;
+
+
 	private String email;
 	private String userName;
-	
+	private String storeId;
+	private String addressId;
+
+
 	public String getUserName() {
 		return userName;
 	}
@@ -63,4 +68,8 @@ public class Customer {
 	}
 	public String getEmail() { return email; }
 	public void setEmail(String email) { this.email = email; }
+	public String getStoreId() { return storeId; }
+	public void setStoreId(String storeId) {this.storeId = storeId;	}
+	public String getAddressId() {return addressId;	}
+	public void setAddressId(String addressId) {this.addressId = addressId;	}
 }

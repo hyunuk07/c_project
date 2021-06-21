@@ -6,7 +6,7 @@ import * as toastr from 'toastr';
  
  
 function Del(ID:number) {
-    BaseService.delete("/persons/delete/", ID).then(
+    BaseService.delete("/member/delete/", ID).then(
         (rp) => {
             if (rp.Status) {
                 toastr.success('Member saved.');    

@@ -37,8 +37,17 @@ public class MemberController {
 	}
 
 	@RequestMapping({"/save"})
-	public String saveCustomer(Customer customer) throws Exception {
+	public String saveCustomer(@RequestBody Customer customer) throws Exception {
+		customer.setStoreId("1");
+		customer.setAddressId("1");
+		if(customer.getCustomerId() == 0) customer.setCustomerId(null);
 		memberRepository.save(customer);
-		return "/list/";
+		return "/list";
+	}
+
+	@RequestMapping({"/delete/{customerId}"})
+	public String deleteCustomer(@PathVariable(name="customerId", required=false) Long customerId) throws Exception {
+		memberRepository.deleteById(customerId);
+		return "/list";
 	}
 }
