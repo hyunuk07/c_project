@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * 회원 관련
@@ -25,17 +26,14 @@ public class MemberController {
 		return "greeting";
 	}
 
-	@RequestMapping({"/list/{username}", "/list/"})
-	public Object searchCustomer(@PathVariable(name="username", required=false) String username) throws Exception {
-
-		Customer customer = new Customer();
-		customer.setLastName(username);
-		customer.setFirstName(username);
-		Iterable<Customer> customerList = memberRepository.findByFirstNameOrLastName(customer);
-
+	@RequestMapping({"/edit/{customerId}", "/list/"})
+	public Object searchCustomer(@PathVariable(name="customerId", required=false) Long customerId) throws Exception {
 		Map map = new HashMap();
-		map.put("list",  customerList.iterator().hasNext() ? customerList : memberRepository.findAll());
-		map.put("userName",customer.getUserName());
+
+		if(customerId != null) {
+			map.put("edit", memberRepository.findById(customerId));
+		}else map.put("list", memberRepository.findAll());
+
 		return map;
 	}
 

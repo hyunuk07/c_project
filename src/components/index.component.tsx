@@ -44,7 +44,7 @@ class Index extends React.Component<IProps, IState> {
     public render(): React.ReactNode {
         return (
             <div>
-                <h3 className="text-center">Persons List</h3>
+                <h3 className="text-center">회원 목록</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }}>
                     <thead>
                         <tr>

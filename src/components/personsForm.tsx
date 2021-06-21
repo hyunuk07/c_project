@@ -9,29 +9,29 @@ interface Props {
     onSave: () => void;
 }
 
-export const PersonsForm: React.StatelessComponent<Props> = (props) => { 
+export const PersonsForm: React.FunctionComponent<Props> = (props) => { 
     return (
         <form>
-            <h1>Manage member</h1>
+            <h1>회원 관리</h1>
 
             <Input
-                name="FullName"
-                label="FullName"
-                value={props.persons.FullName}
+                name="firstName"
+                label="firstName"
+                value={props.persons.firstName}
                 onChange={props.onChange}
             />
 
             <Input
-                name="Address"
-                label="Address"
-                value={props.persons.Address}
+                name="lastName"
+                label="lastName"
+                value={props.persons.lastName}
                 onChange={props.onChange}
             />
 
             <Input
-                name="Age"
-                label="Age"
-                value={props.persons.Age.toString()}
+                name="email"
+                label="email"
+                value={props.persons.email.toString()}
                 onChange={props.onChange}
             />
 

@@ -40,10 +40,10 @@ const TableRow: React.FunctionComponent<IProps> = (props) => {
                 {props.persons.email}
             </td>
             <td> 
-                <Link to={"/edit/" + props.persons.customerId} className="btn btn-primary">Edit</Link>
+                <Link to={"/edit/" + props.persons.customerId} className="btn btn-primary">수정</Link>
             </td>
             <td>
-                <button onClick={()=>Del(Number(props.persons.customerId))} className="btn btn-danger">Delete</button>
+                <button onClick={()=>Del(Number(props.persons.customerId))} className="btn btn-danger">삭제</button>
             </td> 
         </tr>
 

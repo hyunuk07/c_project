@@ -52,15 +52,15 @@ export default class Edit extends React.Component<IProps, IState> {
                 [fieldName]: value,
             }
         };
-
+ 
         this.setState(nextState);
     }
 
     public componentDidMount() { 
-        BaseService.get<Persons>('/persons/edit/', this.props.match.params.id).then(
+        BaseService.get<Persons>('/member/edit/', this.props.match.params.id).then(
             (rp) => {
                 if (rp.Status) {
-                    this.setState({ persons: rp.Data });
+                    this.setState({ persons: rp.Data.edit });
                 } else {
                     toastr.error(rp.Messages);
                     console.log("Messages: " + rp.Messages);
@@ -75,7 +75,7 @@ export default class Edit extends React.Component<IProps, IState> {
     private onSave = () => {
 
         console.log(this.state.persons);
-        BaseService.update<Persons>("/persons/update/", this.props.match.params.id,this.state.persons).then(
+        BaseService.update<Persons>("/member/update/", this.props.match.params.id,this.state.persons).then(
             (rp) => {
                 if (rp.Status) {
                     toastr.success('Member saved.');
