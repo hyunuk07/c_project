@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "_helper";
+
+//** 웹사이트 구성 레이아웃 **//
+
+div.articleWrap {
+    //background:#000;
+    width:100%;
+    padding:10px;
+    @include breakpoint(tablet) {
+        width:800px;
+        margin:0 auto;
+    }
+    >article {
+        @include centerer(false, true);
+    }
+}

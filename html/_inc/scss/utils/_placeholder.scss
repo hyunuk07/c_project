@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+//** extend로 사용할 placehoder **//
+
+
+//width 100%
+%w_100 {
+	width: 100% !important;
+}
+
+//pc width 1200px
+%device_size {
+	width: 1200px;
+	margin: 0 auto;
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
+}
+
+//텍스트 말줄임
+%ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+//float 해제
+%clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+

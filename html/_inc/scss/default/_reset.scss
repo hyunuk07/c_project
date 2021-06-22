@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "../_helper";
+
+
+//** CSS리셋 및 기본 셋팅 **//
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body  {
+    font-family: 'NanumSquare', sans-serif;
+    @include font-size(16);
+    line-height: 130%;
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    color: $co_txt;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+    .normal		{ font-weight: 400 }
+    .bold		{ font-weight: 700 }
+    .bolder		{ font-weight: 800 }
+    .light		{ font-weight: 300 }
+}
+body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table { 
+    font: inherit;
+    color: inherit;
+}
+html, body, div, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption { 
+    padding: 0;
+    margin: 0;
+}
+ol, ul, li {
+    list-style:none;
+}
+em, address {
+    font-style: normal;
+}
+strong {
+    font-weight: 600;
+    vertical-align: text-top;
+}
+img, fieldset { 
+    vertical-align: middle;
+    border:0 none;
+}
+input, select, textarea { 
+    vertical-align: middle; 
+    resize: none;
+}
+// input[type=text], input[type=password], input[type=submit], input[type=search], input[type=email], input[type=tel], input[type=checkbox], input[type=radio], textarea, select { 
+//     -webkit-appearance: none;
+//     border: 0;
+// }
+
+// button { 
+//     border: 0 none; 
+//     background: transparent; 
+//     cursor: pointer;
+//     outline: 0;
+// }
+hr { 
+    display:none;
+}
+br { 
+    font-family: "Dotum";
+}
+.blind { 
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow:hidden;
+}
+
+table { 
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table caption { 
+    width: 0; 
+    height: 0; 
+    visibility: hidden; 
+    text-indent: -9999px; 
+    font-size: 0;
+    line-height: 0;
+}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption { 
+    display: block;
+}
+
+a { 
+    color: inherit;
+    text-decoration:none;
+    outline: 0;
+}
+a:active, a:hover, a:focus { 
+    text-decoration: none;
+    outline: 0;
+}
+ 
+::selection {
+    background: #ffd400;
+    color:#fff;
+}
+::-moz-selection {
+    background: #ffd400;
+    color:#fff;
+}
+::-webkit-selection {
+    background: #ffd400;
+    color:#fff;
+}
+  
+.clearFix {
+    &::after {
+        content:"";
+        display: block;
+        clear:both;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./_inc/font/NanumSquare/nanumsquare.css" rel="stylesheet">
+    <link href="./_inc/css/main.css" rel="stylesheet">
+    <link href="./_inc/css/pages/guide.css" rel="stylesheet">
+
+
+
+
+
+
+
+    <title>JV HTML 리스트</title>
+</head>
+
+<body>
+
+    <div class="guideWrap bgDark">
+        <div class="navWrap">
+            <nav class="guideNav">
+                <h1>Cpro_html</h1>
+
+                    <ul class="depth1">
+                        <li>
+                            <h2>회원</h2>
+                            <ul class="depth2">
+                                <li><button type="menu" onclick="changeIframeUrl('./member/login.html' , '이메일 로그인')">이메일 로그인</button></li>
+                                <li><button type="menu" onclick="changeIframeUrl('./member/info.html' , '회원가입 정보입력/수정')">회원가입 정보입력</button></li>
+                                <li><button type="menu" onclick="changeIframeUrl('./member/complete.html' , '회원가입 완료')">회원가입 완료</button></li>
+                                <li><button type="menu" onclick="changeIframeUrl('./member/turm.html' , '서비스 이용약관')">서비스 이용약관</button></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    
+
+                
+            </nav>
+            <button class="toggleMenu bottom" onClick="leftToggle('.navWrap')">M</button>
+        </div>
+
+        <div class="frameWrap">
+            <iframe src="./member/login.html" title="이메일로그인" id="pageFrame"></iframe>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <script>
+       
+
+
+
+
+
+        ///// menu button ON, OFF
+        function leftToggle(selector) {
+            let target = document.querySelector(selector);
+            //guideNav.classList.toggle('on');
+            if (target.classList.contains('on')) {
+                target.classList.remove('on');
+                target.classList.add('off');
+            }
+
+            else {
+                target.classList.remove('off');
+                target.classList.add('on');
+            }
+
+        }
+
+     
+        ///// Change iframe src
+        function changeIframeUrl(url, title)
+        {
+            const pageFrame = document.getElementById("pageFrame");
+            pageFrame.src = url;
+            pageFrame.title = title;
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

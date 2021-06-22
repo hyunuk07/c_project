@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./_inc/font/NanumSquare/nanumsquare.css" rel="stylesheet">
+    <link href="./_inc/css/main.css" rel="stylesheet">
+    <link href="./_inc/css/pages/guide.css" rel="stylesheet">
+
+    <!-- 하이라이트 -->
+    <link rel="stylesheet" href="./_inc/js/vendor/highlight/hightlight/styles/vs2015.min.css">
+    <script src="./_inc/js/vendor/highlight/hightlight/highlight.min.js"></script>
+    <script src="./_inc/js/vendor/highlight/highlight-line-number/highlightjs-line-numbers.min.js"></script>
+
+
+
+    <title>JV 퍼블리싱 가이드</title>
+</head>
+
+<body>
+
+    <div class="guideWrap">
+        <div class="navWrap">
+            <nav class="guideNav">
+                <h1>Pub Guide</h1>
+                <div>
+                    <ul>
+                        <li><a>font-family</a></li>
+                        <li><a>input[type=""]</a></li>
+                        <li><a>select</a></li>
+                        <li><a>textarea</a></li>
+                        <li><a>button, a</a></li>
+                        <li><a>board</a></li>
+                        <li><a>modal</a></li>
+                    </ul>
+                    
+                </div>
+                
+            </nav>
+            <button class="toggleMenu" onClick="leftToggle('.navWrap')">M</button>
+        </div>
+
+
+        <div class="articleWrap">
+
+
+            <article class="fontFamily">
+                <h2>font-family</h2>
+                <div class="view">
+                    <p class="normal">기회는 일어나는 것이 아니라 만들어내는 것이다.</p>
+                    <p class="bold">기회는 일어나는 것이 아니라 만들어내는 것이다.</p>
+                    <p class="bolder">기회는 일어나는 것이 아니라 만들어내는 것이다.</p>
+                    <p class="light">기회는 일어나는 것이 아니라 만들어내는 것이다.</p>
+                </div>
+                <div class="code">
+                    <pre><code class="language-html">&lt;p class=&quot;normal&quot;&gt;기회는 일어나는 것이 아니라 만들어내는 것이다.&lt;/p&gt;
+&lt;p class=&quot;bold&quot;&gt;기회는 일어나는 것이 아니라 만들어내는 것이다.&lt;/p&gt;
+&lt;p class=&quot;bolder&quot;&gt;기회는 일어나는 것이 아니라 만들어내는 것이다.&lt;/p&gt;
+&lt;p class=&quot;light&quot;&gt;기회는 일어나는 것이 아니라 만들어내는 것이다.&lt;/p&gt;</code></pre>
+                </div>
+            </article>
+
+            <article class="inputText">
+                <h2>input[type=""]</h2>
+                <div class="view">
+                    <div>
+                        <form id="" action="">
+                            <label>이메일</label>
+                            <input type="email" id="" name="" placeholder="email@email.com" />
+                            <button type="submit">확인</button>
+                        </form>
+                        <div class="code">
+                            <pre><code class="language-html">&lt;form id=&quot;&quot; action=&quot;&quot;&gt;
+    &lt;label&gt;이메일&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;&quot; name=&quot;&quot; placeholder=&quot;email@email.com&quot; /&gt;
+    &lt;button type=&quot;submit&quot;&gt;확인&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="mgt_30">
+                        <input type="range" id="" name="" />
+                        <input type="date" id="" name="" />
+                        <input type="color" id="" name="" />
+                        <div class="code">
+                            <pre><code class="language-html">&lt;input type=&quot;range&quot; id=&quot;&quot; name=&quot;&quot; /&gt;
+&lt;input type=&quot;date&quot; id=&quot;&quot; name=&quot;&quot; /&gt;
+&lt;input type=&quot;color&quot; id=&quot;&quot; name=&quot;&quot; /&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div  class="mgt_30">
+                    <form>
+                        <p>라디오 버튼을 선택해 주세요.</p>
+                            <div>
+                                <input type="radio" id="contactChoice1" name="contact" value="email">
+                                <label for="contactChoice1">Email</label>
+
+                                <input type="radio" id="contactChoice2" name="contact" value="phone">
+                                <label for="contactChoice2">Phone</label>
+
+                                <input type="radio" id="contactChoice3" name="contact" value="mail">
+                                <label for="contactChoice3">Mail</label>
+                            </div>
+                            <div>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                        <div class="code">
+                            <pre><code class="language-html">&lt;form class=&quot;mgt_30&quot;&gt;
+    &lt;p&gt;라디오 버튼을 선택해 주세요.&lt;/p&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;contactChoice1&quot; name=&quot;contact&quot; value=&quot;email&quot;&gt;
+        &lt;label for=&quot;contactChoice1&quot;&gt;Email&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;contactChoice2&quot; name=&quot;contact&quot; value=&quot;phone&quot;&gt;
+        &lt;label for=&quot;contactChoice2&quot;&gt;Phone&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;contactChoice3&quot; name=&quot;contact&quot; value=&quot;mail&quot;&gt;
+        &lt;label for=&quot;contactChoice3&quot;&gt;Mail&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+
+                    <div  class="mgt_30">
+                        <fieldset>
+                            <legend>체크박스에 체크하세요.</legend>
+                            <div>
+                                <input type="checkbox" id="coding" name="interest" value="coding">
+                                <label for="coding">Coding</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="music" name="interest" value="music">
+                                <label for="music">Music</label>
+                            </div>
+                        </fieldset>
+                        <div class="code">
+                            <pre><code class="language-html">&lt;fieldset class=&quot;mgt_30&quot;&gt;
+    &lt;legend&gt;체크박스에 체크하세요.&lt;/legend&gt;
+    &lt;div&gt;
+         &lt;input type=&quot;checkbox&quot; id=&quot;coding&quot; name=&quot;interest&quot; value=&quot;coding&quot;&gt;
+         &lt;label for=&quot;coding&quot;&gt;Coding&lt;/label&gt;
+     &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;music&quot; name=&quot;interest&quot; value=&quot;music&quot;&gt;
+        &lt;label for=&quot;music&quot;&gt;Music&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+                        </div>
+    
+                        <p class="mgt_30">type = [text, email, search, url, tel, number, range, date, color, radio,
+                            checkbox]</p>
+    
+                    </div>
+                    </div>
+
+
+            </article>
+
+            <article class="select">
+                <h2>select</h2>
+                <div class="view">
+                    <ul>
+                        <li>
+                            <h3>기본</h3>
+                            <select multiple form="frm1" name="fruits">
+                                <option label="apple bee"></option>
+                                <option value="gjul">귤</option>
+                                <option value="grapes">포도</option>
+                            </select>
+
+                            <form method=get action="" id=frm1>
+                                <button type="submit">submit</button>
+                            </form>
+
+                            <div class="code">
+                                <pre><code class="language-html">&lt;select multiple form=&quot;frm1&quot; name=&quot;fruits&quot;&gt;
+    &lt;option label=&quot;apple bee&quot;&gt;&lt;/option&gt;
+    &lt;option value=&quot;gjul&quot;&gt;귤&lt;/option&gt;
+    &lt;option value=&quot;grapes&quot;&gt;포도&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                            </div>
+
+                        </li>
+                        <li>
+                            <h3>option 속성</h3>
+                            <ul class="sub">
+                                <li><strong>disabled</strong></li>
+                                <li><strong>label</strong> 옵션의 레이블 지정, 이곳에 텍스트가 있다면 inner text 대신 label에 지정한 값이 표시됨</li>
+                                <li><strong>selected</strong> 현재 선택되어 있는지 여부, select 속성이 multiple 허용이라면 다중 배치 가능</li>
+                                <li><strong>value</strong> 레이블과 별도로 지정된 값</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Javascript (ES5)</h3>
+                            <div class="code">
+                                <pre><code class="language-javascript">// 1. 현재 선택된 option의 값 가져오기 (multiple 아닌 경우)
+var list = document.getElementById(&quot;selectFruits&quot;)
+var value = list.options[list.selectedIndex].value
+// 2. 현재 선택된 option의 값 가져오기 (multiple인 경우)
+var options = list.children
+    for(var i in options){
+     if(options[i].selected){
+        obj[i] = options[i].value
+  }
+}
+// 3. 특정 값을 찾아 그 요소를 selected 시키기
+var toFindValue = &quot;grapes&quot;
+    for(var i in options){
+    if(options[i].value == toFindValue){
+        options[i].selected = true
+  }
+}</code></pre>
+                            </div>
+                        </li>
+                </ul>
+                </div>
+                </article>
+
+
+
+            <article class="textarea">
+                <h2>textarea</h2>
+                <div class="view">
+                    <textarea placeholder="You can type into this textarea all day long if you'd like to, but without a submit button to click all of your hard work will just be wasted."></textarea>
+                </div>
+                <div class="code">
+                    <pre><code class="language-javascript">&lt;textarea placeholder=&quot;You can type into this textarea all day long if you&#39;d like to, but without a submit button to click all of your hard work will just be wasted.&quot;&gt;
+&lt;/textarea&gt;</code></pre>
+                </div>
+            </article>
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+       
+        hljs.highlightAll(); //하이라이트 실행
+        hljs.initLineNumbersOnLoad({
+            // singleLine:true,
+            // startFrom: 5,
+        }); //하이라이트 넘버
+
+
+
+
+        ////// menu button ON, OFF
+        function leftToggle(selector) {
+            let target = document.querySelector(selector);
+            //guideNav.classList.toggle('on');
+            if (target.classList.contains('on')) {
+                target.classList.remove('on');
+                target.classList.add('off');
+            }
+
+            else {
+                target.classList.remove('off');
+                target.classList.add('on');
+            }
+
+        }
+
+     
+        
+
+
+    </script>
+
+
+</body>
+
+</html>

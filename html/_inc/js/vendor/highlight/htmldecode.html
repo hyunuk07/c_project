@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+        function Convert(str){
+            if(
+                str.indexOf("&lt;") > -1
+                ||
+                str.indexOf("&gt;") > -1
+                ||
+                str.indexOf("&quot;") > -1
+                ||
+                str.indexOf("&#39;") > -1
+                ||
+                str.indexOf("&lt;") > -1                
+            ){
+                return ConvertHtmlToSystemSource(str);
+            }
+            else {
+                return ConvertSystemSourcetoHtml(str);
+            }
+        }
+
+        function ConvertSystemSourcetoHtml(str){
+
+            str = str.replace(/</g,"&lt;");
+            str = str.replace(/>/g,"&gt;");
+            str = str.replace(/\"/g,"&quot;");
+            str = str.replace(/\'/g,"&#39;");
+            //str = str.replace(/\n/g,"<br />");
+            return str;
+        }
+
+        function ConvertHtmlToSystemSource(str){
+
+            str = str.replace(/&lt;/g, "<");
+            str = str.replace(/&gt;/g, ">");
+            str = str.replace(/&quot;/g, '"');
+            str = str.replace(/&#39;/g, "'");
+            //str = str.replace(/<br \/>/g, "\n");
+
+            return str;
+        }
+
+    </script>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <textarea id="txtSource" cols=50 rows=10>
+
+    </textarea>
+<button id="btnReplace">>></button>
+<!-- <button id="btnOriginal"><<</button> -->
+
+    <textarea id="txtReplace" cols=50 rows=10>
+
+    </textarea>
+
+
+
+    <script>
+        var btnOriginal = document.querySelector("#btnOriginal");
+        var btnReplace = document.querySelector("#btnReplace");
+        var txtSource = document.querySelector("#txtSource");
+        var txtReplace = document.querySelector("#txtReplace");
+
+        btnReplace.addEventListener("click", event => {
+            //txtReplace.value = ConvertSystemSourcetoHtml(txtSource.value);
+            txtReplace.value = Convert(txtSource.value);
+        });
+
+        // btnOriginal.addEventListener("click", event => {
+        //     txtSource.value = ConvertHtmlToSystemSource(txtReplace.value);
+        // });
+
+
+        
+    </script>
+
+</body>
+</html>
+
+

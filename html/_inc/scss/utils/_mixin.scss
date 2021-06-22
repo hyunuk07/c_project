@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+//** include로 사용할 mixin 모음 **//
+
+
+
+//media query
+@mixin breakpoint($point) {
+	@if $point == ssmobile {
+		@media (max-width: 575px) { @content; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 812px) { @content; }
+	}
+	@else if $point == tablet {
+		@media all and (min-width:1020px) { @content; }
+	}
+}
+
+//font size
+@mixin font-size($sizeValue: 13 ){
+	font-size: $sizeValue + px; //fallback for old browsers
+	font-size: (0.065 * $sizeValue) + rem;
+}
+	
+//line height
+@mixin line-height($heightValue: 18 ){
+	line-height: $heightValue + 10px; //fallback for old browsers
+	line-height: (0.125 * $heightValue) + rem;
+}
+
+//opacity - Cross browser opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+//Border Radius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+	background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// center
+@mixin centerer($horizontal: true, $vertical: true) {
+	position: absolute;
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if ($horizontal) {
+		left: 50%;
+		transform: translate(-50%, 0);
+	} @else if ($vertical) {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
