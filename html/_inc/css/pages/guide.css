@@ -961,11 +961,11 @@ div.guideWrap {
         margin: 10px 0; }
       div.guideWrap nav.guideNav ul.depth1 li ul.depth2 li {
         margin: 5px 0; }
-    div.guideWrap nav.guideNav button[type="menu"] {
+    div.guideWrap nav.guideNav button[type="button"] {
       background: none;
       border: none;
       color: #999; }
-      div.guideWrap nav.guideNav button[type="menu"]:hover {
+      div.guideWrap nav.guideNav button[type="button"]:hover {
         text-decoration: underline;
         color: #fff; }
   div.guideWrap button.toggleMenu {
