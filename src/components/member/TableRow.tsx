@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import Persons from '../models/persons';  
-import BaseService from '../service/base.service';
+import Persons from '../../models/member/persons';
+import BaseService from '../../service/member/base.service';
 import * as toastr from 'toastr';   
  
  

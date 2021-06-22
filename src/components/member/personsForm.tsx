@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Persons from '../models/persons';
+import Persons from '../../models/member/persons';
 
-import { Input, Button } from '../common/components/form';
+import { Input, Button } from '../../common/components/form';
 
 interface Props {
     persons: Persons;

@@ -1,4 +1,4 @@
-import Response from "../models/response";
+import Response from "../../models/member/response";
 import axios from "axios";
 
 

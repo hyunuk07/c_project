@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TableRow from './TableRow';
-import Persons from '../models/persons';
-import BaseService from '../service/base.service';
+import Persons from '../../models/member/persons';
+import BaseService from '../../service/member/base.service';
 
 interface IProps {
 }

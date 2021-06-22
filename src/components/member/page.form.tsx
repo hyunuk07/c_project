@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Persons from '../models/persons';
+import Persons from '../../models/member/persons';
 import { PersonsForm } from './personsForm';
 
 interface IProps {

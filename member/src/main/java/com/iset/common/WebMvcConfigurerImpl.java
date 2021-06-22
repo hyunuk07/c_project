@@ -1,4 +1,4 @@
-package com.iset.member;
+package com.iset.common;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

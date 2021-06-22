@@ -1,4 +1,4 @@
-package com.iset.member;
+package com.iset.common;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +20,6 @@ import com.nbp.ncp.nes.auth.PropertiesFileCredentialsProvider;
 import com.nbp.ncp.nes.exception.ApiException;
 import com.nbp.ncp.nes.marshaller.FormMarshaller;
 import com.nbp.ncp.nes.marshaller.JsonMarshaller;
-import com.nbp.ncp.nes.marshaller.XmlMarshaller;
 import com.nbp.ncp.nes.model.EmailSendRequest;
 import com.nbp.ncp.nes.model.EmailSendRequestRecipients;
 import com.nbp.ncp.nes.model.EmailSendResponse;

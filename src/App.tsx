@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
 import './App.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'toastr/build/toastr.min.css'; 
-import Index from './components/index.component';
-import Edit from './components/edit.component';
-import Create from './components/create.component';
+import Index from './components/member/index.component';
+import Edit from './components/member/edit.component';
+import Create from './components/member/create.component';
 
 const App: React.FC = () => {
   return (

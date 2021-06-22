@@ -13,12 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.iset.member;
+package com.iset.member.dao;
 
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
-
+import com.iset.member.entity.Customer;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
@@ -26,6 +23,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.scheduling.annotation.Async;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 /**
  * Simple repository interface for {@link Customer} instances. The interface is used to declare so called query methods,
@@ -35,22 +36,15 @@ import org.springframework.scheduling.annotation.Async;
  * @author Thomas Darimont
  * @author Christoph Strobl
  */
-public interface MemberRepository extends CrudRepository<Customer, Long> {
-
+public interface MemberDao extends CrudRepository<Customer, Long> {
 
 	/**
-	 * Find all users with the given lastname. This method will be translated into a query by constructing it directly
-	 * from the method name as there is no other query declared.
-	 *
 	 * @param lastName
 	 * @return
 	 */
 	List<Customer> findByLastName(String lastName);
 
 	/**
-	 * Returns all users with the given firstname. This method will be translated into a query using the one declared in
-	 * the {@link Query} annotation declared one.
-	 *
 	 * @param firstName
 	 * @return
 	 */
@@ -58,9 +52,6 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 	List<Customer> findByFirstName(@Param("firstName") String firstName);
 
 	/**
-	 * Returns all users with the given name as first- or lastname. This makes the query to method relation much more
-	 * refactoring-safe as the order of the method parameters is completely irrelevant.
-	 *
 	 * @param name
 	 * @return
 	 */
@@ -68,17 +59,12 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 	List<Customer> findByFirstNameOrLastName(@Param("name") String name);
 
 	/**
-	 * Returns the total number of entries deleted as their lastnames match the given one.
-	 *
 	 * @param lastName
 	 * @return
 	 */
 	Long removeByLastName(String lastName);
 
 	/**
-	 * Returns a {@link Slice} counting a maximum number of {@link Pageable#getPageSize()} users matching given criteria
-	 * starting at {@link Pageable#getOffset()} without prior count of the total number of elements available.
-	 *
 	 * @param lastName
 	 * @param page
 	 * @return
@@ -86,32 +72,17 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 	Slice<Customer> findByLastNameOrderByUserNameAsc(String lastName, Pageable page);
 
 	/**
-	 * Return the first 2 users ordered by their lastname asc.
-	 *
-	 * <pre>
-	 * Example for findFirstK / findTopK functionality.
-	 * </pre>
-	 *
 	 * @return
 	 */
 	List<Customer> findFirst2ByOrderByLastNameAsc();
 
 	/**
-	 * Return the first 2 users ordered by the given {@code sort} definition.
-	 *
-	 * <pre>
-	 * This variant is very flexible because one can ask for the first K results when a ASC ordering
-	 * is used as well as for the last K results when a DESC ordering is used.
-	 * </pre>
-	 *
 	 * @param sort
 	 * @return
 	 */
 	List<Customer> findTop2By(Sort sort);
 
 	/**
-	 * Return all the users with the given firstname or lastname. Makes use of SpEL (Spring Expression Language).
-	 *
 	 * @param customer
 	 * @return
 	 */
@@ -119,8 +90,6 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 	Iterable<Customer> findByFirstNameOrLastName(Customer customer);
 
 	/**
-	 * Sample default method.
-	 *
 	 * @param customer
 	 * @return
 	 */
@@ -129,18 +98,12 @@ public interface MemberRepository extends CrudRepository<Customer, Long> {
 	}
 
 	/**
-	 * Sample method to demonstrate support for {@link Stream} as a return type with a custom query. The query is executed
-	 * in a streaming fashion which means that the method returns as soon as the first results are ready.
-	 *
 	 * @return
 	 */
 	@Query("select u from Customer u")
 	Stream<Customer> streamAllCustomers();
 
 	/**
-	 * Sample method to demonstrate support for {@link Stream} as a return type with a derived query. The query is
-	 * executed in a streaming fashion which means that the method returns as soon as the first results are ready.
-	 *
 	 * @return
 	 */
 	Stream<Customer> findAllByLastNameIsNotNull();

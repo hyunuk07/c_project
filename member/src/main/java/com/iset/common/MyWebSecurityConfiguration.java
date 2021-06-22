@@ -1,4 +1,4 @@
-package com.iset.member;
+package com.iset.common;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +24,7 @@ public class MyWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
                 // Spring Security should completely ignore URLs starting with /resources/
-                .antMatchers("/resources/**");
+           .antMatchers("/resources/**");
     }
 
     @Override
