@@ -14,7 +14,7 @@
 		@media (max-width: 812px) { @content; }
 	}
 	@else if $point == tablet {
-		@media all and (min-width:1020px) { @content; }
+		@media all and (min-width:1500px) { @content; }
 	}
 }
 

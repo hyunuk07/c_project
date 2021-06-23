@@ -19,35 +19,40 @@
 </head>
 
 <body>
-          <div class="articleWrap">
-                    <article class="member">
-                              <h1>이메일 로그인</h1>
-                              <form id="" action="">
-                              <label>이메일</label>
-                              <input type="email" id="" name="" placeholder="이메일을 입력하세요." />
-                              <input type="password" id="" name="" minlength="8" required  placeholder="비밀번호를 입력하세요." />
-                              <button type="submit" class="btn100">로그인</button>
-                              
-                              <div class="clearfix">
-                                        <div class="fLeft">
-                                        <input type="checkbox" id="" name="loginCheck" value="">
-                                        <label for="loginCheck">로그인 유지하기</label>
-                                        </div>
-                                        <div class="fRight">
-                                        <a href="">아이디 찾기</a>
-                                        <span>|</span>
-                                        <a href="">비밀번호 찾기</a>
-                                        </div>
-                              </div>
-          
-                              <div class="borderBox clearfix">
-                                        <p>아직 회원이 아니신가요?</p>
-                                        <a href="" class="textLink">회원가입</a>
-                              </div>
-                              </form>
-                    </article>
-          
-          </div>
+    <header class="member">
+        <h1 class="blind">CPRO</h1>
+        <button type="button" class="btn exitBtn">X</button><!--이미지 또는 font icon 들어가야 함.-->
+    </header>
+
+    <div class="articleWrap center">
+
+        <article class="member login center">
+            <h1 class="bold">이메일 로그인</h1>
+            <form id="" action="">
+                <input type="email" id="" name="" placeholder="이메일을 입력하세요." />
+                <input type="password" id="" name="" minlength="8"  placeholder="비밀번호를 입력하세요." />
+                <button type="submit" class="btnPrimary w100">로그인</button>
+                
+                <div class="findLogin clearFix">
+                    <div class="fLeft">
+                    <input type="checkbox" id="" name="loginCheck" value="">
+                    <label for="loginCheck">로그인 유지하기</label>
+                    </div>
+                    <div class="fRight">
+                    <a href="">아이디 찾기</a>
+                    <span>|</span>
+                    <a href="">비밀번호 찾기</a>
+                    </div>
+                </div>
+
+                <div class="borderBox clearFix">
+                    <p>아직 회원이 아니신가요?</p>
+                    <a href="" class="textLink">회원가입 ></a><!--이미지 또는 font icon 들어가야 함.-->
+                </div>
+            </form>
+        </article>
+    
+    </div>
 </body>
 
 

@@ -10,21 +10,91 @@
 
 
 
-          <!--회원 css-->
+    <!--회원 css-->
     <link href="../_inc/css/pages/member.css" rel="stylesheet">
 
 
 
-    <title>이메일 로그인</title>
+    <title>회원 가입</title>
 </head>
 
+
 <body>
-          <div class="articleWrap">
-                    <article class="member">
-                              <h1>회원 가입</h1>
-                    
-                    </article>
-          </div>
+    
+    <header class="member">
+        <h1 class="blind">CPRO</h1>
+    </header>
+
+    <div class="articleWrap">
+        <header class="blank">
+            <h1>회원 가입</h1>
+            <button type="button" class="btn prev">&lsaquo;</button><!--이미지 또는 font icon 들어가야 함.-->
+        </header>
+        <article class="member info">
+            <h1 class="blind">회원 정보 입력 및 수정</h1>
+
+            <article class="emailForm">
+                <h2 class="blind">이메일 인증</h2>
+                <div class="email">
+                    <div class="inputEmailForm">
+                        <input type="text" id="" name="" class="email"/>
+                        <select form="emailConfirm" name="emailConfirm" class="insideSelect">
+                            <option value="naver.com">@naver.com</option>
+                            <option value="gmail.com">@gmail.com</option>
+                        </select>
+                        <button type="submit" class="inputBtn gray">인증요청</button>
+                    </div>
+                    <div class="inputEmailForm">
+                        <input type="number" id="" name="" placeholder="인증번호 입력"/>
+                        <button type="submit" class="inputBtn primary">인증</button>
+                    </div>
+                    <p class="text">인증되었습니다.</p>
+                </div>
+            </article>
+
+            <article class="pwForm mgt_30">
+                <h2 class="blind">비밀번호</h2>
+                <input type="password" id="" name="" placeholder="비밀번호"/>
+                <input type="password" id="" name="" placeholder="비밀번호 확인"/>
+                <p class="text mgt_10">위에 입력한 비밀번호와 같지 않습니다.</p>
+            </article>
+
+            <article class="infoForm mgt_30">
+                <h2 class="blind">이름,전화번호</h2>
+                <input type="text" id="" name="" placeholder="이름"/>
+                <input type="tel" id="" name="" placeholder="전화번호"/>
+            </article>
+
+            <article class="genderForm mgt_30">
+                <h2>성별</h2>
+                <div class="btnGroup clearFix">
+                    <button type="button" class="left on">남성</button><!--className 'on' 활성화-->
+                    <button type="button" class="right">여성</button>
+                </div>
+            </article>
+
+            <article class="dateForm mgt_30">
+                <h2>생년월일</h2>
+                <div class="selectBox clearFix">
+                    <select form="dateChoose" name="year" class="dateChoose col3">
+                        <option value="1991">1991년</option>
+                        <option value="1992">1992년</option>
+                    </select>
+                    <select form="dateChoose" name="month" class="dateChoose col3">
+                        <option value="1">1월</option>
+                        <option value="2">2월</option>
+                    </select>
+                    <select form="dateChoose" name="day" class="dateChoose col3">
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                    </select>
+                </div>
+            </article>
+
+            <button type="submit" class="btnPrimary w100 mgt_70">완료</button>
+
+        </article>
+    </div>
 </body>
 
 

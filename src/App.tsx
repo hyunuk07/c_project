@@ -24,6 +24,7 @@ const App: React.FC = () => {
                           <li className="nav-item">
                               <Link to={'/index'} className="nav-link">Index</Link>
                           </li>
+
                       </ul>
                   </div>
               </nav> <br/>

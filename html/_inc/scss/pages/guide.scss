@@ -93,7 +93,7 @@ div.guideWrap {
 			color: #eee;
 		}
 	}
-	div.articleWrap {
+	div.guideArticleWrap {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -198,7 +198,7 @@ div.frameWrap {
 	width:30%;
 	height:80%;
 	background:#fff;
-	overflow-y: auto;
+	overflow:hidden;
 	@include breakpoint(tablet) {
 		width:800px;
 	}	

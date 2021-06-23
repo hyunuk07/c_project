@@ -2,3 +2,194 @@
 @import "../_base";
 
 
+body, html {
+    background:$co_bg_gray;
+}
+
+header.member {
+    &.bg {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:60px;
+        margin:0 0 20px 0;
+        padding:15px;
+        background:$co_white;
+    }
+}
+article.member {
+    h1 {
+        margin:10px 0 50px 0;
+        @include font-size(25);
+        text-align: center;
+    }
+
+    &.login {
+        margin:0 auto;
+        text-align: center;
+        button.btnPrimary {
+            margin:15px 0 20px 0;
+        }
+        div.findLogin {
+            @include breakpoint(ssmobile) {
+                @include font-size(13);
+            }
+            .fRight {
+                color:$co_gray;
+            }
+        }
+        div.borderBox {
+            margin:20px 0 0 0;
+            padding:20px;
+            border: 1px solid $co_gray_light;
+            p {
+                float:left;
+            }
+            a.textLink {
+                float: right;
+            }
+        }
+    }
+
+    &.info {
+
+        h2 {
+            margin:0 0 10px 0;
+            font-weight: 900;
+        }
+        article.emailForm {
+            >div.email {
+                >div.inputEmailForm {
+                    position:relative;
+                    margin:0 0 7px 0;
+                    input {
+                        outline:none;
+                        &.email {
+                            padding-right:55%;
+                            @include breakpoint(ssmobile) {
+                                padding-right:50%;
+                            }
+                        }
+                    }
+                    select.insideSelect {
+                        position:absolute;
+                        top:0;
+                        right:16%;
+                        width:35%;
+                        height:70px;
+                        border-top:1px solid $co_gray_lighter;
+                        border-bottom:1px solid $co_gray_lighter;
+                        border-left:none;
+                        border-right:none;
+                        @include breakpoint(ssmobile) {
+                            width:auto;
+                            right:20%;
+                        }
+                    }
+                    button {
+                        @extend %btn;
+                        &.inputBtn {
+                            position:absolute;
+                            top:0;
+                            right:0;
+                            width:15%;
+                            height:70px;
+                            font-weight: 400;
+                            &.gray {
+                                background:$co_gray_light;
+                            }
+                            &.primary {
+                                background:$co_primary;
+                                color:$co_white;
+                            }
+                            @include breakpoint(ssmobile) {
+                                width:19%;
+                            }
+                        }
+                        @include breakpoint(ssmobile) {
+                            @include font-size(13);
+                        }
+                    } 
+                }
+                p.text {
+                    color:$co_primary;
+                }
+            }
+        }
+        article.pwForm {
+            p.text {
+                color:$co_warning;
+            }
+        }
+        article.genderForm {
+            div.btnGroup {
+                button {
+                    display: block;
+                    float:left;
+                    width:50%;
+                    height:60px;
+                    background:none;
+                    border:1px solid $co_gray_light;
+                    color:$co_gray;
+                    &.on {
+                        border:1px solid #000;
+                        color:#000;
+                        background:$co_white;
+                    }
+                    &.left {
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                    }
+                    &.right {
+                        border-top-right-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                    }
+                }
+            }
+
+        }
+        article.dateForm {
+            select {
+                text-align-last: center;
+                text-align: center;
+                -ms-text-align-last: center;
+                -moz-text-align-last: center;
+            }
+        }
+    }
+
+    &.complete {
+
+        text-align: center;
+        h2 {
+            @include font-size(24);
+            @include line-height(20);
+            margin:0 0 20px 0;
+            font-weight: 800;
+        }
+        p.disc {
+            @include font-size(18);
+            
+            strong {
+                font-weight: 800;
+            }
+        }
+        p.info {
+            @include line-height(12);
+            color:$co_gray;
+            word-break: keep-all;
+        }
+
+    }
+    &.terms {
+
+        h3 {
+            font-weight: 800;
+            @include font-size(18);
+        }
+        .agreeAll {
+            font-weight: 800;
+        }
+    }
+}
