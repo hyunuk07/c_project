@@ -13,8 +13,9 @@ div.articleWrap {
         transform: none;
     }
     @include breakpoint(tablet) {
-        width:800px;
+        //width:800px;
         @include centerer(true, false);
+        padding:100px 0 ;
     }
     &.center {
         @media (max-width: 812px) and (orientation: landscape) {
@@ -23,6 +24,7 @@ div.articleWrap {
         }
         @include centerer(false, true);
         @include breakpoint(tablet) {
+            width:800px;
             @include centerer(true, true);
         }
     }
@@ -33,6 +35,7 @@ div.articleWrap {
         @include breakpoint(tablet) {
             //@include centerer(true, true);
             width:800px;
+            margin:0 auto;
         }
         &.center {
             @include centerer(false, true);
