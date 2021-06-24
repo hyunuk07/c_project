@@ -209,12 +209,16 @@ button.prev {
 }
 
 input[type=text], input[type=email], input[type=password], input[type=url], input[type=tel], input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   height: 70px;
   padding: 10px;
   border: 1px solid #ececec;
   -webkit-box-shadow: 2px 1px 10px rgba(1, 1, 1, 0.1);
           box-shadow: 2px 1px 10px rgba(1, 1, 1, 0.1);
+  -webkit-border-radius: 0;
 }
 
 input[type=password] {
@@ -681,8 +685,8 @@ div.guideWrap div.navWrap.on {
   left: 0;
 }
 div.guideWrap div.navWrap.off {
-  -webkit-animation-name: menuToggle;
-          animation-name: menuToggle;
+  -webkit-animation-name: menuToggle2;
+          animation-name: menuToggle2;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   left: -200px;
@@ -832,6 +836,22 @@ div.guideWrap div.guideArticleWrap article ul li ul.sub li strong {
   }
   to {
     left: 0;
+  }
+}
+@-webkit-keyframes menuToggle2 {
+  from {
+    left: 0;
+  }
+  to {
+    left: -200px;
+  }
+}
+@keyframes menuToggle2 {
+  from {
+    left: 0;
+  }
+  to {
+    left: -200px;
   }
 }
 div.frameWrap {

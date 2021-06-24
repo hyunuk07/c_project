@@ -208,12 +208,16 @@ button.prev {
 }
 
 input[type=text], input[type=email], input[type=password], input[type=url], input[type=tel], input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   height: 70px;
   padding: 10px;
   border: 1px solid #ececec;
   -webkit-box-shadow: 2px 1px 10px rgba(1, 1, 1, 0.1);
           box-shadow: 2px 1px 10px rgba(1, 1, 1, 0.1);
+  -webkit-border-radius: 0;
 }
 
 input[type=password] {

@@ -25,7 +25,7 @@ div.guideWrap {
 		}
 
 		&.off {
-			animation-name: menuToggle;
+			animation-name: menuToggle2;
 			animation-duration: 0.5s;
 			left: -200px;
 		}
@@ -183,7 +183,14 @@ div.guideWrap {
 		left: 0;
 	}
 }
-
+@keyframes menuToggle2 {
+	from {
+		left: 0;
+	}
+	to {
+		left: -200px;
+	}
+}
 // @keyframes articleToggle {
 // 	from {
 // 		left: 0;
