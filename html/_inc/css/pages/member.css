@@ -738,6 +738,10 @@ article.member.info article.emailForm > div.email > div.inputEmailForm select.in
     right: 20%;
   }
 }
+article.member.info article.emailForm > div.email > div.inputEmailForm select.insideSelect.right {
+  right: 10px;
+  padding: 0 0 0 10px;
+}
 article.member.info article.emailForm > div.email > div.inputEmailForm button.inputBtn {
   position: absolute;
   top: 0;
@@ -797,6 +801,14 @@ article.member.info article.dateForm select {
   text-align: center;
   -ms-text-align-last: center;
   -moz-text-align-last: center;
+}
+article.member.info div.agreeCheck {
+  margin: 10px 0 0 0;
+}
+article.member.info div.agreeCheck a.textLink {
+  margin: 0 0 0 10px;
+  text-decoration: underline;
+  font-weight: 400;
 }
 article.member.complete {
   text-align: center;

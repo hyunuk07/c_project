@@ -92,9 +92,14 @@ article.member {
                         border-bottom:1px solid $co_gray_lighter;
                         border-left:none;
                         border-right:none;
+                        
                         @include breakpoint(ssmobile) {
                             width:auto;
                             right:20%;
+                        }
+                        &.right {
+                            right:10px;
+                            padding:0 0 0 10px;
                         }
                     }
                     button {
@@ -165,6 +170,14 @@ article.member {
                 text-align: center;
                 -ms-text-align-last: center;
                 -moz-text-align-last: center;
+            }
+        }
+        div.agreeCheck {
+            margin:10px 0 0 0;
+            a.textLink {
+                margin:0 0 0 10px;
+                text-decoration: underline;
+                font-weight: 400;
             }
         }
     }

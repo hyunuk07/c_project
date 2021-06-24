@@ -2,6 +2,21 @@
 @import "_helper";
 
 //** 웹사이트 구성 레이아웃 **//
+header.blank {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:30px 0;
+    @include bg-opacity($co_bg_gray,0.8);
+    z-index:100;
+    h1 {
+        margin:10px 0;
+        @include font-size(23);
+        text-align: center;
+        font-weight: 700
+    }
+}
 
 div.articleWrap {
     position:fixed;
@@ -14,7 +29,9 @@ div.articleWrap {
     }
     @include breakpoint(tablet) {
         //width:800px;
-        @include centerer(true, false);
+        //@include centerer(true, false);
+        position:static;
+        transform: none;
         padding:100px 0 ;
     }
 
@@ -29,24 +46,20 @@ div.articleWrap {
             @include centerer(true, true);
         }
     }
-    header.blank {
-        h1 {
-            margin:10px 0;
-            @include font-size(25);
-            text-align: center;
-            font-weight: 700
-        }
-    }
+
 
     > article {
+        margin:100px 0 0 0;
         padding:15px;
         @include breakpoint(tablet) {
             //@include centerer(true, true);
             width:800px;
             margin:0 auto;
+            padding:100px 0;
         }
 
         &.center {
+            margin:0;
             > h1 {
                 margin:10px 0 50px 0;
                 @include font-size(25);
