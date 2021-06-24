@@ -26,9 +26,9 @@
         <button type="button" class="btn prev"><i class="icon-arrowLeft"><span class="blind">이전으로</span></i></button>
     </header>
 
-    <div class="articleWrap center">
+    <div class="articleWrap">
 
-        <article class="member info center">
+        <article class="member info">
             <h1 class="blind">보호자 인증</h1>
 
 
@@ -45,9 +45,14 @@
             </article>
             
             <div class="agreeCheck">
-                <input type="checkbox" id="" name="agreeParents" value="">
-                <label for="agreeParents">보호자 정보제공 동의</label>
-                <a href="" class="textLink">보기</a>
+                <div class="checkBoxWrap">
+                    <input type="checkbox" id="agreeParents" name="agreeParents" value="">
+                    <label for="agreeParents">보호자 정보제공 동의</label>
+                    <span class="checkmark"></span>
+                    <a href="" class="textLink">보기</a>
+                </div>
+
+                
             </div>
 
             <button type="submit" class="btnPrimary w100 mgt_70">인증하기</button>

@@ -170,6 +170,10 @@ article.member {
                 text-align: center;
                 -ms-text-align-last: center;
                 -moz-text-align-last: center;
+                -webkit-text-align-last: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         div.agreeCheck {

@@ -52,15 +52,21 @@
 
             <article class="pwForm mgt_30">
                 <h2 class="blind">비밀번호</h2>
-                <input type="password" id="" name="" placeholder="비밀번호"/>
-                <input type="password" id="" name="" placeholder="비밀번호 확인"/>
+                <div class="inputTextWrap">
+                    <input type="password" id="" class="top" name="" placeholder="비밀번호"/>
+                    <input type="password" id="" class="bottom" name="" placeholder="비밀번호 확인"/>
+                </div>
+
                 <p class="text mgt_10">위에 입력한 비밀번호와 같지 않습니다.</p>
             </article>
 
             <article class="infoForm mgt_30">
                 <h2 class="blind">이름,전화번호</h2>
-                <input type="text" id="" name="" placeholder="이름"/>
-                <input type="tel" id="" name="" placeholder="전화번호"/>
+                <div class="inputTextWrap">
+                    <input type="text" id="" class="top" name="" placeholder="이름"/>
+                    <input type="tel" id="" name="" class="bottom" placeholder="전화번호"/>
+                </div>
+
             </article>
 
             <article class="genderForm mgt_30">
@@ -74,18 +80,24 @@
             <article class="dateForm mgt_30">
                 <h2>생년월일</h2>
                 <div class="selectBox clearFix">
-                    <select form="dateChoose" name="year" class="dateChoose col3">
-                        <option value="1991">1991년</option>
-                        <option value="1992">1992년</option>
-                    </select>
-                    <select form="dateChoose" name="month" class="dateChoose col3">
-                        <option value="1">1월</option>
-                        <option value="2">2월</option>
-                    </select>
-                    <select form="dateChoose" name="day" class="dateChoose col3">
-                        <option value="1">1일</option>
-                        <option value="2">2일</option>
-                    </select>
+                    <div class="selectWrap col3">
+                        <select form="dateChoose" name="year" class="dateChoose">
+                            <option value="1991">1991년</option>
+                            <option value="1992">1992년</option>
+                        </select>
+                    </div>
+                    <div class="selectWrap col3">
+                        <select form="dateChoose" name="month" class="dateChoose">
+                            <option value="1">1월</option>
+                            <option value="2">2월</option>
+                        </select>
+                    </div>
+                    <div class="selectWrap col3">
+                        <select form="dateChoose" name="day" class="dateChoose">
+                            <option value="1">1일</option>
+                            <option value="2">2일</option>
+                        </select>
+                    </div>
                 </div>
             </article>
 

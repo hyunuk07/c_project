@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import "../_helper";
 
+.inputTextWrap {
+    border:1px solid $co_gray_lighter;
+    border-radius: 5px;
+    box-shadow: 2px 1px 10px rgba(1,1,1,0.1);
+}
 
 input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="number"] {
     -webkit-appearance: none;
@@ -12,37 +17,174 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
     height:70px;
     padding:10px;
     border:1px solid $co_gray_lighter;
+    border-radius: 5px;
     box-shadow: 2px 1px 10px rgba(1,1,1,0.1);
 
 
-    -webkit-border-radius:0;
+    -webkit-border-radius:5px;
+
+    &.top {
+        border:none;
+        box-shadow: none;
+    }
+
+    &.bottom {
+        border:none;
+        border-top:1px solid $co_gray_lighter;
+        box-shadow: none;
+    }
 }
 
 input[type="password"] {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-select {
+
+.selectWrap {
+    position: relative;
+    //display: inline-block;
     height:60px;
-    background:none;
-    border:none;
-    border-bottom: 1px solid $co_gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &.col3 {
         display: block;
         float:left;
         width:31%;
         margin-left:3%;
         text-align: center;
+        border-bottom: 1px solid $co_gray;
         &:first-child {
             margin:0;
         }
     }
 }
 
+.selectWrap:before {
+    content: '\e905';
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    right: 0;
+    top: 10px;
+    height: 26px;
+    padding: 15px 0px 0px 0;
+    position: absolute;
+    pointer-events: none;
+    color:$co_gray;
+    @include font-size(13);
+}
+
+
+select {
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:none;
+    border:none;
+    -webkit-border-radius:0;
+
+    width:100%;
+    height:60px;
+}
+
 textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     width:100%;
     height:200px;
     padding:10px;
     border:1px solid $co_gray_lighter;
     box-shadow: 2px 1px 10px rgba(1,1,1,0.1);
+
+    -webkit-border-radius:0;
 }
+
+
+.frameBox {
+    width:100%;
+    height:200px;
+    padding:10px;
+    border:1px solid $co_gray_lighter;
+    box-shadow: 2px 1px 10px rgba(1,1,1,0.1);
+    overflow-y: auto;
+}
+
+.checkBoxWrap {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    @include font-size(16);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    label {
+        display: inline-block;
+        padding:1px 0 0 0;
+    }
+}
+
+
+/* Hide the browser's default checkbox */
+.checkBoxWrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    border:1px solid #000;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkBoxWrap:hover input ~ .checkmark {
+    border:1px solid #000;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkBoxWrap input:checked ~ .checkmark {
+    border:1px solid #000;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkBoxWrap input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkBoxWrap .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

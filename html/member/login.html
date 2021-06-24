@@ -29,14 +29,18 @@
         <article class="member login center">
             <h1 class="bold">이메일 로그인</h1>
             <form id="" action="">
-                <input type="email" id="" name="" placeholder="이메일을 입력하세요." />
-                <input type="password" id="" name="" minlength="8"  placeholder="비밀번호를 입력하세요." />
+                <div class="inputTextWrap">
+                    <input type="email" id="" class="top" name="" placeholder="이메일을 입력하세요." />
+                    <input type="password" id="" class="bottom" name="" minlength="8"  placeholder="비밀번호를 입력하세요." />
+                </div>
+
                 <button type="submit" class="btnPrimary w100">로그인</button>
                 
                 <div class="findLogin clearFix">
-                    <div class="fLeft">
-                    <input type="checkbox" id="" name="loginCheck" value="">
-                    <label for="loginCheck">로그인 유지하기</label>
+                    <div class="fLeft checkBoxWrap">
+                        <input type="checkbox" id="loginCheck" name="loginCheck" value="">
+                        <label for="loginCheck">로그인 유지하기</label>
+                        <span class="checkmark"></span>
                     </div>
                     <div class="fRight">
                     <a href="">아이디 찾기</a>

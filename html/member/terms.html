@@ -30,19 +30,30 @@
             <h2 class="blind">약관 동의</h2>
             <article class="mgt_30">
                 <h3><i class="icon-dotSmall"><span class="blind">1</span></i> <span>이용 약관 동의</span></h3><!--이미지 또는 font icon 들어가야 함.-->
-                <textarea class="mgt_15 mgb_10"></textarea>
-                <input type="checkbox" id="" name="agree1" value="">
-                <label for="agree1">서비스 이용약관에 동의합니다.</label>
+                <div class="frameBox mgt_15 mgb_10"></div>
+                <div class="checkBoxWrap">
+                    <input type="checkbox" id="agreeTerm1" name="agreeTerm1" value="">
+                    <label for="agreeTerm1">서비스 이용약관에 동의합니다.</label>
+                    <span class="checkmark"></span>
+                </div>
+
             </article>
             <article class="mgt_50 mgb_10">
                 <h3><i class="icon-dotSmall"><span class="blind">1</span></i>  <span>개인정보취급방침</span></h3><!--이미지 또는 font icon 들어가야 함.-->
-                <textarea class="mgt_15 mgb_10"></textarea>
-                <input type="checkbox" id="" name="agree2" value="">
-                <label for="agree2">개인정보취급방침에 동의합니다.</label>
-            </article>
+                <div class="frameBox mgt_15 mgb_10"></div>
+                <div class="checkBoxWrap">
+                    <input type="checkbox" id="agreeTerm2" name="agreeTerm2" value="">
+                    <label for="agreeTerm2">개인정보취급방침에 동의합니다.</label>
+                    <span class="checkmark"></span>
+                </div>
 
-            <input type="checkbox" id="" name="agreeAll" value="">
-            <label for="agreeAll" class="agreeAll">전체 동의</label>
+            </article>
+            <div class="checkBoxWrap">
+                <input type="checkbox" id="agreeAll" name="agreeAll" value="">
+                <label for="agreeAll" class="agreeAll">전체 동의</label>
+                <span class="checkmark"></span>
+            </div>
+
 
             <button type="submit" class="btnPrimary w100 mgt_30">동의</button>
         </article>
