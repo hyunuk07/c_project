@@ -3,6 +3,9 @@
 
 
 //버튼 스타일
+button, a {
+    cursor: pointer;
+}
 
 %btn {
     display: inline-block;

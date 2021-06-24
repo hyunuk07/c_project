@@ -141,6 +141,10 @@ a:active, a:hover, a:focus {
   clear: both;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 article.member.info article.emailForm > div.email > div.inputEmailForm button, button.prev, button.exitBtn, .btnPrimary {
   display: inline-block;
   letter-spacing: -0.5px;
