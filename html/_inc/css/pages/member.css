@@ -149,6 +149,7 @@ article.member.info article.emailForm > div.email > div.inputEmailForm button, b
   font-weight: 400;
   outline: 0;
   border: none;
+  background: none;
 }
 
 .btnPrimary {
@@ -169,14 +170,19 @@ a.textLink {
 
 button.exitBtn {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
 }
 
 button.prev {
   position: absolute;
-  top: 30px;
-  left: 15px;
+  top: 27px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  color: #8d8d8d;
 }
 
 .btnLine {
@@ -658,12 +664,6 @@ header.member.bg {
   background: #fff;
 }
 
-article.member h1 {
-  margin: 10px 0 50px 0;
-  font-size: 25px;
-  font-size: 1.625rem;
-  text-align: center;
-}
 article.member.login {
   margin: 0 auto;
   text-align: center;
@@ -671,10 +671,10 @@ article.member.login {
 article.member.login button.btnPrimary {
   margin: 15px 0 20px 0;
 }
-@media (max-width: 575px) {
-  article.member.login div.findLogin {
-    font-size: 13px;
-    font-size: 0.845rem;
+@media (max-width: 320px) {
+  article.member.login div.findLogin > div {
+    float: none;
+    margin: 5px 0;
   }
 }
 article.member.login div.findLogin .fRight {
@@ -690,6 +690,17 @@ article.member.login div.borderBox p {
 }
 article.member.login div.borderBox a.textLink {
   float: right;
+}
+article.member.login div.borderBox a.textLink span {
+  display: inline-block;
+  vertical-align: middle;
+}
+article.member.login div.borderBox a.textLink i {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  font-size: 13px;
+  font-size: 0.845rem;
+  vertical-align: middle;
 }
 article.member.info h2 {
   margin: 0 0 10px 0;
@@ -840,6 +851,17 @@ article.member.terms h3 {
   font-weight: 800;
   font-size: 18px;
   font-size: 1.17rem;
+}
+article.member.terms h3 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+article.member.terms h3 i {
+  margin: 0 5px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.01px;
+  font-size: 0.00065rem;
 }
 article.member.terms .agreeAll {
   font-weight: 800;

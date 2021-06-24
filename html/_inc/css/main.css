@@ -43,6 +43,13 @@ div.articleWrap.center {
             transform: translate(-50%, -50%);
   }
 }
+div.articleWrap header.blank h1 {
+  margin: 10px 0;
+  font-size: 25px;
+  font-size: 1.625rem;
+  text-align: center;
+  font-weight: 700;
+}
 div.articleWrap > article {
   padding: 15px;
 }
@@ -58,6 +65,13 @@ div.articleWrap > article.center {
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   width: 100%;
+}
+div.articleWrap > article.center > h1 {
+  margin: 10px 0 50px 0;
+  font-size: 25px;
+  font-size: 1.625rem;
+  text-align: center;
+  font-weight: 700;
 }
 @media (max-width: 812px) and (orientation: landscape) {
   div.articleWrap > article.center {

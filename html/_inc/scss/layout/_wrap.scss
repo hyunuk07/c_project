@@ -29,7 +29,14 @@ div.articleWrap {
             @include centerer(true, true);
         }
     }
-
+    header.blank {
+        h1 {
+            margin:10px 0;
+            @include font-size(25);
+            text-align: center;
+            font-weight: 700
+        }
+    }
 
     > article {
         padding:15px;
@@ -38,7 +45,14 @@ div.articleWrap {
             width:800px;
             margin:0 auto;
         }
+
         &.center {
+            > h1 {
+                margin:10px 0 50px 0;
+                @include font-size(25);
+                text-align: center;
+                font-weight: 700
+            }
             @include centerer(false, true);
             width:100%;
             @media (max-width: 812px) and (orientation: landscape) {
@@ -50,6 +64,7 @@ div.articleWrap {
                 @include centerer(true, true);
             }
         }
+
 
     }
 

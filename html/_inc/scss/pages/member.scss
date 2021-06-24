@@ -19,11 +19,7 @@ header.member {
     }
 }
 article.member {
-    h1 {
-        margin:10px 0 50px 0;
-        @include font-size(25);
-        text-align: center;
-    }
+
 
     &.login {
         margin:0 auto;
@@ -32,9 +28,13 @@ article.member {
             margin:15px 0 20px 0;
         }
         div.findLogin {
-            @include breakpoint(ssmobile) {
-                @include font-size(13);
+            > div {
+                @include breakpoint(sssmobile) {
+                    float:none;
+                    margin:5px 0;
+                }
             }
+
             .fRight {
                 color:$co_gray;
             }
@@ -48,6 +48,16 @@ article.member {
             }
             a.textLink {
                 float: right;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                i {
+                    display: inline-block;
+                    margin:0 0 0 5px;
+                    @include font-size(13);
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -200,6 +210,16 @@ article.member {
         h3 {
             font-weight: 800;
             @include font-size(18);
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            i {
+                margin:0 5px 0 0;
+                display: inline-block;
+                vertical-align: middle;
+                @include font-size(0.01); 
+            }
         }
         .agreeAll {
             font-weight: 800;
