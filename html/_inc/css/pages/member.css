@@ -640,6 +640,12 @@ textarea {
 body, html {
   background: #f9f9f9;
 }
+@media (max-width: 320px) {
+  body, html {
+    font-size: 15px;
+    font-size: 0.975rem;
+  }
+}
 
 header.member.bg {
   position: fixed;
@@ -791,19 +797,44 @@ article.member.complete h2 {
   line-height: 2.5rem;
   margin: 0 0 20px 0;
   font-weight: 800;
+  word-break: keep-all;
+}
+@media (max-width: 320px) {
+  article.member.complete h2 {
+    font-size: 20px;
+    font-size: 1.3rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+    margin: 0 0 10px 0;
+  }
 }
 article.member.complete p.disc {
   font-size: 18px;
   font-size: 1.17rem;
+  word-break: keep-all;
 }
 article.member.complete p.disc strong {
   font-weight: 800;
+}
+@media (max-width: 320px) {
+  article.member.complete p.disc {
+    font-size: 15px;
+    font-size: 0.975rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
 }
 article.member.complete p.info {
   line-height: 22px;
   line-height: 1.5rem;
   color: #8d8d8d;
   word-break: keep-all;
+}
+@media (max-width: 320px) {
+  article.member.complete p.info {
+    font-size: 13px;
+    font-size: 0.845rem;
+  }
 }
 article.member.terms h3 {
   font-weight: 800;

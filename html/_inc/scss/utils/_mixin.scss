@@ -7,7 +7,10 @@
 
 //media query
 @mixin breakpoint($point) {
-	@if $point == ssmobile {
+	@if $point == sssmobile {
+		@media (max-width: 320px) { @content; }
+	}
+	@else if $point == ssmobile {
 		@media (max-width: 575px) { @content; }
 	}
 	@else if $point == mobile {

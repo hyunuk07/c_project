@@ -4,6 +4,9 @@
 
 body, html {
     background:$co_bg_gray;
+    @include breakpoint(sssmobile) {
+        @include font-size(15);
+    }
 }
 
 header.member {
@@ -167,18 +170,31 @@ article.member {
             @include line-height(20);
             margin:0 0 20px 0;
             font-weight: 800;
+            word-break: keep-all;
+            @include breakpoint(sssmobile) {
+                @include font-size(20);
+                @include line-height(10);
+                margin:0 0 10px 0;
+            }
         }
         p.disc {
             @include font-size(18);
-            
+            word-break: keep-all;
             strong {
                 font-weight: 800;
+            }
+            @include breakpoint(sssmobile) {
+                @include font-size(15);
+                @include line-height(10);
             }
         }
         p.info {
             @include line-height(12);
             color:$co_gray;
             word-break: keep-all;
+            @include breakpoint(sssmobile) {
+                @include font-size(13);
+            }
         }
 
     }
