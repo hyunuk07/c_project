@@ -876,8 +876,8 @@ article.member.terms h3 i {
   margin: 0 5px 0 0;
   display: inline-block;
   vertical-align: middle;
-  font-size: 0.01px;
-  font-size: 0.00065rem;
+  font-size: 15px;
+  font-size: 0.975rem;
 }
 article.member.terms .agreeAll {
   font-weight: 800;
