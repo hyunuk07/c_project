@@ -17,6 +17,7 @@ div.articleWrap {
         @include centerer(true, false);
         padding:100px 0 ;
     }
+
     &.center {
         @media (max-width: 812px) and (orientation: landscape) {
             position:static;

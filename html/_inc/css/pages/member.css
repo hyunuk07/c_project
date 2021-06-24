@@ -26,6 +26,12 @@ html .bolder, body .bolder {
 html .light, body .light {
   font-weight: 300;
 }
+@media (max-width: 320px) {
+  html, body {
+    font-size: 16px;
+    font-size: 1.04rem;
+  }
+}
 
 body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table {
   font: inherit;
@@ -640,12 +646,6 @@ textarea {
 body, html {
   background: #f9f9f9;
 }
-@media (max-width: 320px) {
-  body, html {
-    font-size: 15px;
-    font-size: 0.975rem;
-  }
-}
 
 header.member.bg {
   position: fixed;
@@ -818,10 +818,10 @@ article.member.complete p.disc strong {
 }
 @media (max-width: 320px) {
   article.member.complete p.disc {
-    font-size: 15px;
-    font-size: 0.975rem;
-    line-height: 20px;
-    line-height: 1.25rem;
+    font-size: 16px;
+    font-size: 1.04rem;
+    line-height: 22px;
+    line-height: 1.5rem;
   }
 }
 article.member.complete p.info {
@@ -832,8 +832,8 @@ article.member.complete p.info {
 }
 @media (max-width: 320px) {
   article.member.complete p.info {
-    font-size: 13px;
-    font-size: 0.845rem;
+    font-size: 16px;
+    font-size: 1.04rem;
   }
 }
 article.member.terms h3 {

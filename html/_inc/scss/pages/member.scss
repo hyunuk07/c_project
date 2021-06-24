@@ -4,9 +4,6 @@
 
 body, html {
     background:$co_bg_gray;
-    @include breakpoint(sssmobile) {
-        @include font-size(15);
-    }
 }
 
 header.member {
@@ -184,8 +181,8 @@ article.member {
                 font-weight: 800;
             }
             @include breakpoint(sssmobile) {
-                @include font-size(15);
-                @include line-height(10);
+                @include font-size(16);
+                @include line-height(12);
             }
         }
         p.info {
@@ -193,7 +190,7 @@ article.member {
             color:$co_gray;
             word-break: keep-all;
             @include breakpoint(sssmobile) {
-                @include font-size(13);
+                @include font-size(16);
             }
         }
 

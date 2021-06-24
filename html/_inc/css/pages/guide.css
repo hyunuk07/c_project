@@ -27,6 +27,12 @@ html .bolder, body .bolder {
 html .light, body .light {
   font-weight: 300;
 }
+@media (max-width: 320px) {
+  html, body {
+    font-size: 16px;
+    font-size: 1.04rem;
+  }
+}
 
 body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table {
   font: inherit;
