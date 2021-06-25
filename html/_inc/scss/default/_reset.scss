@@ -10,8 +10,9 @@
 }
 
 html, body  {
-    font-family: 'NanumSquare', sans-serif;
-    @include font-size(16.5);
+    font-family: -apple-system, "Apple SD Gothic Neo", BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important; 
+    //font-family: "Apple SD Gothic Neo",  sans-serif;
+    @include font-size(16);
     line-height: 130%;
     height: 100%;
     -webkit-text-size-adjust: none;
@@ -23,7 +24,7 @@ html, body  {
     .bolder		{ font-weight: 800 }
     .light		{ font-weight: 300 }
     @include breakpoint(sssmobile) {
-        @include font-size(16);
+        @include font-size(15);
     }
 }
 body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table { 

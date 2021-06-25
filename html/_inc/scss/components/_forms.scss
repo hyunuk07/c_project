@@ -26,12 +26,20 @@ input[type="text"], input[type="email"], input[type="password"], input[type="url
     &.top {
         border:none;
         box-shadow: none;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
     }
-
+    &.middle {
+        border-top:1px solid $co_gray_lighter;
+        box-shadow: none;
+        border-radius: 0%;
+    }
     &.bottom {
         border:none;
         border-top:1px solid $co_gray_lighter;
         box-shadow: none;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
     }
 }
 

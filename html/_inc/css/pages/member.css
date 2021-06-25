@@ -5,9 +5,9 @@
 }
 
 html, body {
-  font-family: "NanumSquare", sans-serif;
-  font-size: 16.5px;
-  font-size: 1.0725rem;
+  font-family: -apple-system, "Apple SD Gothic Neo", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+  font-size: 16px;
+  font-size: 1.04rem;
   line-height: 130%;
   height: 100%;
   -webkit-text-size-adjust: none;
@@ -29,8 +29,8 @@ html .light, body .light {
 }
 @media (max-width: 320px) {
   html, body {
-    font-size: 16px;
-    font-size: 1.04rem;
+    font-size: 15px;
+    font-size: 0.975rem;
   }
 }
 
@@ -232,12 +232,22 @@ input[type=text].top, input[type=email].top, input[type=password].top, input[typ
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+input[type=text].middle, input[type=email].middle, input[type=password].middle, input[type=url].middle, input[type=tel].middle, input[type=number].middle {
+  border-top: 1px solid #ececec;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0%;
 }
 input[type=text].bottom, input[type=email].bottom, input[type=password].bottom, input[type=url].bottom, input[type=tel].bottom, input[type=number].bottom {
   border: none;
   border-top: 1px solid #ececec;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
 }
 
 input[type=password] {
