@@ -166,14 +166,10 @@ article.member {
         }
         article.dateForm {
             select {
-                text-align-last: center;
-                text-align: center;
-                -ms-text-align-last: center;
-                -moz-text-align-last: center;
-                -webkit-text-align-last: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                position:absolute;
+                width:auto;
+                padding:0 20px;
+                @include centerer(true, false);
             }
         }
         div.agreeCheck {
